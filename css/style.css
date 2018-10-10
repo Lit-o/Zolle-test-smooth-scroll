@@ -147,7 +147,7 @@ footer {
 .gallery-projects .lisii-slick:after {
   content: 'Лисий Нос';
 }
-.gallery-projects .marsh-slick:after {
+.gallery-projects .marsh--slick:after {
   content: 'пр. Маршала Блюхера';
 }
 .gallery-projects .dolgoozernaiya-slick:after {
