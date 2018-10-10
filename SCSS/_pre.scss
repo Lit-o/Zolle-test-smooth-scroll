@@ -1,0 +1,55 @@
+$fz-s:15px;
+$ff:roboto, arial, sans-serif;
+$orange: #f36d39;
+$blue: #004167;
+
+@mixin m-font {
+  font-family: roboto, arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #5a5a5a;
+  line-height: 15px;
+  vertical-align: top;
+}
+
+@mixin trns {
+  transition: all 0.4s ease;
+}
+
+
+/*Преднастройки*/
+
+* {
+  padding: 0;
+   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type:none;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.vis-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin-top: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect (0 0 0 0);
+  overflow: hidden;
+  z-index: -1;
+}
+
+body {
+  font-family: $ff;
+}

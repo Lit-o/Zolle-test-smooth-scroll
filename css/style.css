@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/*Шрифты*/
+/* roboto-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v18-latin_cyrillic-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/roboto-v18-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-v18-latin_cyrillic-regular.woff") format("woff"), url("../fonts/roboto-v18-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/roboto-v18-latin_cyrillic-regular.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+/* roboto-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/roboto-v18-latin_cyrillic-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/roboto-v18-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v18-latin_cyrillic-700.woff") format("woff"), url("../fonts/roboto-v18-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/roboto-v18-latin_cyrillic-700.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/roboto-v18-latin_cyrillic-italic.eot");
+  /* IE9 Compat Modes */
+  src: local("Roboto Italic"), local("Roboto-Italic"), url("../fonts/roboto-v18-latin_cyrillic-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v18-latin_cyrillic-italic.woff2") format("woff2"), url("../fonts/roboto-v18-latin_cyrillic-italic.woff") format("woff"), url("../fonts/roboto-v18-latin_cyrillic-italic.ttf") format("truetype"), url("../fonts/roboto-v18-latin_cyrillic-italic.svg#Roboto") format("svg");
+  /* Legacy iOS */
+}
+/*Переменные и преднастройки*/
+/*Преднастройки*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.vis-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin-top: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect 0 0 0 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+body {
+  font-family: roboto, arial, sans-serif;
+}
+
+/*Декорации*/
+header {
+  height: 100px;
+  background-color: #d0cecb;
+  text-align: center;
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.content-before {
+  height: 900px;
+  background-color: #e2e0dd;
+  text-align: center;
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+footer {
+  height: 300px;
+  background-color: #ccc;
+  text-align: center;
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Основной дизайн*/
+.gallery-projects {
+  position: relative;
+  width: 1900px;
+  height: 940px;
+  margin: 0 auto;
+  /*стилизую стрелочки*/
+}
+.gallery-projects img {
+  display: block;
+}
+.gallery-projects .gallery-slick {
+  position: absolute;
+  top: 110px;
+  left: 375px;
+  width: 525px;
+  height: 350px;
+  /*background-color: gold;*/
+  box-shadow: 12px 68px 131px 0px rgba(0, 0, 0, 0.35);
+  opacity: 1;
+}
+.gallery-projects .gallery-description {
+  position: absolute;
+  top: 210px;
+  left: 1020px;
+}
+.gallery-projects .gallery-description h3 {
+  font-size: 34px;
+  color: #2b2f37;
+  margin-bottom: 22px;
+}
+.gallery-projects .gallery-description p {
+  font-size: 18px;
+  color: #646870;
+}
+.gallery-projects .gallery-slick:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  bottom: 0px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.35);
+  line-height: 50px;
+}
+.gallery-projects .lisii-slick:after {
+  content: 'Лисий Нос';
+}
+.gallery-projects .marsh--slick:after {
+  content: 'пр. Маршала Блюхера';
+}
+.gallery-projects .dolgoozernaiya-slick:after {
+  content: 'ул. Долгоозерная';
+}
+.gallery-projects .bogatir-slick:after {
+  content: 'пр. Богатырский';
+}
+.gallery-projects .kolo-slick:after {
+  content: 'пр. Коломяжский';
+}
+.gallery-projects .narodn-slick:after {
+  content: 'Народного Ополчения';
+}
+.gallery-projects .slick-prev, .gallery-projects .slick-next {
+  z-index: 1001;
+  width: 28px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 0;
+}
+.gallery-projects .slick-prev:before, .gallery-projects .slick-next:before {
+  opacity: 1;
+}
+.gallery-projects .slick-prev {
+  top: 170px;
+  left: 20px;
+}
+.gallery-projects .slick-next {
+  top: 170px;
+  left: 480px;
+}
+.gallery-projects .slick-prev:before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/prev.png);
+  -webkit-background-size: auto;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.4s ease;
+}
+.gallery-projects .slick-next:before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(../img/prev.png);
+  -webkit-background-size: auto;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: all 0.4s ease;
+  transform: rotate(180deg);
+}
+.gallery-projects .minis-container {
+  position: absolute;
+  top: 510px;
+  left: 785px;
+}
+.gallery-projects .minis-second-container {
+  position: absolute;
+  top: 700px;
+  left: 785px;
+}
+.gallery-projects .mini {
+  display: inline-block;
+  width: 240px;
+  height: 170px;
+  margin-right: 20px;
+  /*background-color: grey;*/
+  background-position: center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.gallery-projects .mini:hover {
+  -webkit-background-size: 111%;
+  background-size: 111%;
+  background-position: center;
+}
+.gallery-projects .mini p {
+  margin-top: 128px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 42px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.502);
+}
+.gallery-projects #mini-lisii-nos {
+  background-image: url(../img/lisii-mini.jpg);
+}
+.gallery-projects #mini-marshala-bluhera {
+  background-image: url(../img/marsh-mini.jpg);
+}
+.gallery-projects #mini-dolgoozernaia {
+  background-image: url(../img/dolgoooz-mini.jpg);
+}
+.gallery-projects #mini-bogatirski {
+  background-image: url(../img/bogatir-mini.jpg);
+}
+.gallery-projects #mini-kolomiajsky {
+  background-image: url(../img/kolom-mini.jpg);
+}
+.gallery-projects #mini-narodnogo {
+  background-image: url(../img/narod-mini.jpg);
+}
+.gallery-projects button {
+  position: absolute;
+  top: 718px;
+  left: 1090px;
+  background-color: inherit;
+  border: 0px solid #000;
+  font-style: italic;
+  font-size: 14px;
+  color: #159fef;
+  text-decoration: underline;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.gallery-projects button:hover {
+  color: grey;
+}
+.gallery-projects #less {
+  top: 885px;
+}
+
+/*# sourceMappingURL=style.css.map */
