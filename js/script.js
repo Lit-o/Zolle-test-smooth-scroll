@@ -5,10 +5,6 @@ $( document ).ready(function() {
   $("#gallery-description-title").fadeOut();
   $("#gallery-description-text").fadeOut();
 
-  $("#mini-lisii-nos").fadeIn(1);
-  $("#mini-marshala-bluhera").fadeIn(1);
-  $("#mini-dolgoozernaia").fadeIn(1);
-
   $("#mini-lisii-nos").fadeOut();
   $("#mini-marshala-bluhera").fadeOut();
   $("#mini-dolgoozernaia").fadeOut();
@@ -174,88 +170,4 @@ $( document ).ready(function() {
 
       $("#defocused-narodn").delay(650).fadeIn(600);
     });
-
-
-
-
 });
-
-
-
-
-
-  // скролл к контактам
-  // Не мой, но работает отлично!
-  $("#menu").on("click","a", function (event) {
-    event.preventDefault();
-
-    var id  = $(this).attr('href'),
-
-        top = $(id).offset().top;
-
-    $('body,html').animate({scrollTop: top}, 1500);
-  });
-
-
-  $("#menu__mob").on("click","a", function (event) {
-    event.preventDefault();
-
-    var id  = $(this).attr('href'),
-
-        top = $(id).offset().top;
-
-    $('body,html').animate({scrollTop: top}, 1500);
-  });
-
-
-  // скролл наверх
-  // Не мой, но работает отлично!
-  $('#scroll-top-btn').on('click', function (event) {
-    event.preventDefault();
-    $('body,html').animate({'scrollTop':0},1000);
-  });
-
-  var timer;
-  $(window).on('scroll', function(){
-    if ( timer ) clearTimeout(timer);
-    timer = setTimeout(function(){
-      showScrollTopBtn();
-    }, 100);
-  });
-
-  showScrollTopBtn();
-
-  function showScrollTopBtn() {
-    if( $(document).scrollTop() > 500 ) {
-      $('#scroll-top-btn').fadeIn();
-    }
-    else {
-      $('#scroll-top-btn').fadeOut();
-    }
-  }
-
-$(document).ready(function(){
-
-  $(window).on('resize', function() { // запускаем чек при каждом ресайзе окна
-    checkMedia();
-  })
-  checkMedia(); // запускаем чек окна при открытии страницы
-
-  function checkMedia() {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      $('.our-resourses__container').slick('unslick');
-      }
-    else {
-      $('.our-resourses__container').slick({
-        autoplay: true,
-        infinite: true,
-        autoplaySpeed: 3000,
-        speed: 1000,
-        dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      });
-      }
-  };
-}); ////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
