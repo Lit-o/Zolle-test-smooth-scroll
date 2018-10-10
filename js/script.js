@@ -1,4 +1,70 @@
 $( document ).ready(function() {
+
+  // Программирую появление под скролл
+
+  $("#gallery-description-title").fadeOut();
+  $("#gallery-description-text").fadeOut();
+
+  $("#mini-lisii-nos").fadeIn(1);
+  $("#mini-marshala-bluhera").fadeIn(1);
+  $("#mini-dolgoozernaia").fadeIn(1);
+
+  $("#mini-lisii-nos").fadeOut();
+  $("#mini-marshala-bluhera").fadeOut();
+  $("#mini-dolgoozernaia").fadeOut();
+
+
+
+  var timer;
+  $(window).on('scroll', function(){
+    if ( timer ) clearTimeout(timer);
+    timer = setTimeout(function(){
+      showNext();
+    }, 0);
+  });
+
+  showNext();
+
+  function showNext() {
+    if( $(document).scrollTop() > 500 ) {
+      $('#gallery-description-title').fadeIn(800);
+    }
+    if( $(document).scrollTop() <= 500 ) {
+      $('#gallery-description-title').fadeOut(800);
+    }
+
+    if( $(document).scrollTop() > 600 ) {
+      $('#gallery-description-text').fadeIn(800);
+    }
+    if( $(document).scrollTop() <= 600 ) {
+      $('#gallery-description-text').fadeOut(800);
+    }
+
+
+
+    if( $(document).scrollTop() > 700 ) {
+      $('#mini-lisii-nos').stop().fadeIn(800);
+    }
+    if( $(document).scrollTop() <= 700 ) {
+      $('#mini-lisii-nos').fadeOut(800);
+    }
+
+    if( $(document).scrollTop() > 800 ) {
+      $('#mini-marshala-bluhera').fadeIn(800);
+    }
+    if( $(document).scrollTop() <= 800 ) {
+      $('#mini-marshala-bluhera').fadeOut(800);
+    }
+
+    if( $(document).scrollTop() > 900 ) {
+      $('#mini-dolgoozernaia').fadeIn(800);
+    }
+    if( $(document).scrollTop() <= 900 ) {
+      $('#mini-dolgoozernaia').fadeOut(800);
+    }
+  }
+
+
   // программирую логику больше-меньше мини-иконок
   $("#less").hide();
   $(".minis-second-container").hide();
@@ -110,61 +176,7 @@ $( document ).ready(function() {
     });
 
 
-  // Программирую появление под скролл
 
-  $("#gallery-description-title").fadeOut();
-  $("#gallery-description-text").fadeOut();
-  $("#mini-lisii-nos").fadeOut();
-  $("#mini-marshala-bluhera").fadeOut();
-  $("#mini-dolgoozernaia").fadeOut();
-
-
-  var timer;
-  $(window).on('scroll', function(){
-    if ( timer ) clearTimeout(timer);
-    timer = setTimeout(function(){
-      showNext();
-    }, 0);
-  });
-
-  showNext();
-
-  function showNext() {
-    if( $(document).scrollTop() > 500 ) {
-      $('#gallery-description-title').fadeIn(800);
-    }
-    if( $(document).scrollTop() <= 500 ) {
-      $('#gallery-description-title').fadeOut(800);
-    }
-
-    if( $(document).scrollTop() > 600 ) {
-      $('#gallery-description-text').fadeIn(800);
-    }
-    if( $(document).scrollTop() <= 600 ) {
-      $('#gallery-description-text').fadeOut(800);
-    }
-
-    if( $(document).scrollTop() > 700 ) {
-      $('#mini-lisii-nos').fadeIn();
-    }
-    if( $(document).scrollTop() <= 700 ) {
-      $('#mini-lisii-nos').fadeOut();
-    }
-
-    if( $(document).scrollTop() > 800 ) {
-      $('#mini-marshala-bluhera').fadeIn();
-    }
-    if( $(document).scrollTop() <= 800 ) {
-      $('#mini-marshala-bluhera').fadeOut();
-    }
-
-    if( $(document).scrollTop() > 900 ) {
-      $('#mini-dolgoozernaia').fadeIn();
-    }
-    if( $(document).scrollTop() <= 900 ) {
-      $('#mini-dolgoozernaia').fadeOut();
-    }
-  }
 
 });
 

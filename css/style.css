@@ -222,11 +222,12 @@ footer {
   width: 240px;
   height: 170px;
   margin-right: 20px;
-  /*background-color: grey;*/
+  background-color: gold;
   background-position: center;
   -webkit-background-size: 100%;
   background-size: 100%;
-  transition: all 0.1s linear;
+  transition: background-size 0.1s linear;
+  transition: -webkit-background-size 0.1s linear;
   cursor: pointer;
 }
 .gallery-projects .mini:hover {
